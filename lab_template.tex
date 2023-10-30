@@ -29,9 +29,7 @@
 \end{center}
 % Bullet points on what was not met
 \begin{itemize}
-    \item \textbf{Requirement 1:} The requirement was not met because of this reason.
-    \item \textbf{Requirement 2:} The requirement was not met because of this reason.
-    \item \textbf{Requirement 3:} The requirement was not met because of this reason.
+    \item All Requirements were met.
 \end{itemize}
 
 \begin{center}
@@ -43,9 +41,7 @@
 \end{center}
 % More Bullet points with filler text
 \begin{itemize}
-    \item \textbf{Problem 1:} The problem was encountered because of this reason.
-    \item \textbf{Problem 2:} The problem was encountered because of this reason.
-    \item \textbf{Problem 3:} The problem was encountered because of this reason.
+    \item No problems were encountered.
 \end{itemize}
 
 \begin{center}
@@ -56,10 +52,7 @@
     \hrule
 \end{center}
 
-Now we start our introduction to our write up
-For your write up, write a brief introduction to what you are doing in the in lab. two to four sentences. 
-Omit this section for the prelab.
-
+We explore the characteristics of diodes, how voltage differences affect current flow and how to use diodes to create a half wave rectifier. We also explore the use of comparators and how to use them to create a circuit that can detect when a voltage is above or below a certain threshold.
 
 \begin{center}
     \hrule
@@ -152,7 +145,42 @@ for submission to canvas.
 \end{enumerate}
 \textbf{8.5.2 Breadboard Implementation:}
 \begin{enumerate}
-    \item Build the circuit in Figure 8.4 on the breadboard. Use the LM393.
+    \item Build the circuit in Figure 8.4 on the breadboard. The following plot shows the o-scope output.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.75\textwidth]{inlab_1.png}
+        \caption{COMPARATOR PLOT PHYSICAL} 
+        \label{fig:comp-plot-phys}
+    \end{figure}
+    \item Build the circuit from Section 8.5.1 - Item 1. Plot the input and output on the o-scope and save an image of the display. 
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.75\textwidth]{inlab_2.png}
+        \caption{8.5.1 PLOT PHYSICAL} 
+        \label{fig:851-plot-phys}
+    \end{figure}
+    \item Build two version of the circuit from Subsection 8.5.1 - Item 2, one with where
+the capacitance is 0.1 uF and the other is 0.01 uF. Plot the outputs of both
+circuits on the o-scope and save an image of the display.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.75\textwidth]{inlab_3.png}
+        \caption{DIFFERENCE IN CAPS PLOT PHYSICAL} 
+        \label{fig:diff-plot-phys}
+    \end{figure}
+    \item Build the circuit from Subsection 8.5.1 - Item 4. Set the input to a 0.5 Hz, 0.1
+V amplitude sine wave. Vary the potentiometer, increase the gain, so that the
+LEDs illuminate when the op amp output is greater than the reference voltages.
+Plot the output of the gain amplifier and the output of either comparator on
+the o-scope and save an image of the display
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.75\textwidth]{inlab_4.png}
+        \caption{POTENTIOMETER PLOT PHYSICAL} 
+        \label{fig:pot-plot-phys}
+    \end{figure}
+
+
 \end{enumerate}
 \pagebreak
 \begin{center}
@@ -164,6 +192,8 @@ for submission to canvas.
     \hrule
 \end{center}
 
-This is where I start to answer the questions in the lab. We only need to do this for the write up.
-
+Comparitively, we first explore the first circuit brought to attention in the lab, the half-wave rectifier. A rectifier circuit is used to convert AC to DC typically with the use of diodes.
+The circuit can be viewed on Figure~\ref{fig:half_wave_rectifier_circuit}, The diode will only allow current to flow forwards as seen in \textbf{Figure \ref{fig:half_wave_rectifier_plot}}. The second circuit introduces a capacitor to the circuit. The capacitor will charge up to the peak voltage of the input signal and then discharge through the load resistor. This charging effect essentially smooths the output. In the half-wave rectifier with the capacitor, we can see the voltage level not dropping fully to zero, or dropping at a slower rate in \textbf{Figure \ref{fig:half_wave_rectifier_plot}}.
+The third circuit mentioned was the comparator circuit. The comparator circuit is used to compare two voltages and output a digital signal based on the comparison. The circuit can be viewed on \textbf{Figure~\ref{fig:comp-circuit}}. The output of the comparator is either high or low depending on the voltage of the input signal. This would the drive the LEDs.
+The fourth circuit is a comparator circuit with an op-amp. The op-amp is used to amplify the input signal. The circuit can be viewed on \textbf{Figure~\ref{fig:comp-circuit-op-amp}}. The output of the op-amp is then fed into the comparator circuit. The output of the comparator circuit is then used to drive the LEDs. The LEDs will light up when the voltage of the input signal is greater than the reference voltage. The reference voltage is set by the potentiometer. The potentiometer is used to adjust the reference voltage. The circuit can be viewed on \textbf{Figure~\ref{fig:pot-plot-phys}}.
 \end{document}
